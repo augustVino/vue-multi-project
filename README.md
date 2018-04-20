@@ -1,12 +1,9 @@
 # vue-multi-project
-一套vue+webpack，实现多个项目共存。
-#### 前提
-目前工作出现一个问题，多个项目均使用vue+webpack，并且项目之间有很多的组件或者方法都是相同的（粘贴复制），整体布局基本一样（只是主题颜色有些许不同）。感觉这样子后期维护繁杂，同一个问题需要修改很多遍。于是，在研究两天之后，生成了一套新的项目结构，基本改善了上述问题。
-#### 项目结构
-``` 
-   The files tree is:
+
+> A Vue.js project
+
+The files tree is:
 =================
-   
     |__ build
         |__ build.js
         |__ check-versions.js
@@ -93,25 +90,30 @@
     |__ package-lock.json
     |__ package.json
     |__ README.md
+
+
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# run unit tests
+npm run unit
+
+# run all tests
+npm test
 ```
 
-#### 实现过程
-> ##### 1.首先进入项目根路径中的 config 文件夹，新增两个文件（ multipage.js、multipage.project.js ），分别是配置多页面和多项目切换的。
-> ##### 2.然后修改 config 文件夹下的 index.js 文件。
-> ##### 3.修改 build 文件夹下的 webpack.base.conf.js 、webpack.dev.conf.js 、webpack.prod.conf.js 。
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-这是需要修改的文件，具体怎么修改这里不再赘述，因为很多时候我们都是只要求实现，可以不用管原理。如果对实现过程有兴趣，可以看我的项目，用到了些许的 node 知识，文件中基本上都有对应的注释说明，可能有理解偏差，望评论指正。
-
----
-
-#### 项目简介
-> ##### 1.有两个项目（admin和master），src路径下的另一个文件夹 global 是存放一些项目公共文件（如组件或工具函数），此处存放的是vue官方的logo图片，两个项目都用到了。
-> ##### 2. 每个项目中都有个 pages 文件夹，用来存放项目入口文件。
-> ##### 3. 每个项目都有独自的 config 文件，文件内容：
-``` javascript
-	'use strict'
-	module.exports = {
-		name : 'admin',	//文件夹名称 和最后打包后文件夹的名称  /src/admin/
-	}
-```
-> ##### 4. 可以直接拿来用！！！

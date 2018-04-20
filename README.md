@@ -139,4 +139,4 @@ npm test
         name : 'admin', //文件夹名称 和最后打包后文件夹的名称  /src/admin/
     }
 ```
-
+> #### 4. 切换项目：在根目录的config文件夹找到multipage.project.js文件打开，，切换到对应的项目进行开发打包。打包后也会对应生成独立的文件夹。

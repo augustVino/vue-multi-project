@@ -1,2 +1,96 @@
 # vue-multi-project
-一套vue+webpack，实现多个项目共存
+一套vue+webpack，实现多个项目共存。
+#### 前提
+目前工作出现一个问题，多个项目均使用vue+webpack，并且项目之间有很多的组件或者方法都是相同的（粘贴复制），整体布局基本一样（只是主题颜色有些许不同）。感觉这样子后期维护繁杂，同一个问题需要修改很多遍。于是，在研究两天之后，生成了一套新的项目结构，基本改善了上述问题。
+#### 项目结构
+``` 
+   The files tree is:
+=================
+   
+    |__ build
+        |__ build.js
+        |__ check-versions.js
+        |__ logo.png
+        |__ utils.js
+        |__ vue-loader.conf.js
+        |__ webpack.base.conf.js
+        |__ webpack.dev.conf.js
+        |__ webpack.prod.conf.js
+    |__ config
+        |__ dev.env.js
+        |__ index.js
+        |__ multipage.js
+        |__ multipage.project.js
+        |__ prod.env.js
+        |__ test.env.js
+    |__ dist
+        |__ admin
+            |__ favicon.ico
+            |__ index.html
+            |__ static
+                |__ css
+                    |__ index.3a947c1c1f207832148c696e78c1f1bd.css
+                    |__ index.3a947c1c1f207832148c696e78c1f1bd.css.map
+                |__ js
+                    |__ index.3675151582d13b8e0c7e.js
+                    |__ index.3675151582d13b8e0c7e.js.map
+                    |__ manifest.2ae2e69a05c33dfc65f8.js
+                    |__ manifest.2ae2e69a05c33dfc65f8.js.map
+                    |__ vendor.7fed9fa7b7ba482410b7.js
+                    |__ vendor.7fed9fa7b7ba482410b7.js.map
+        |__ master
+            |__ favicon.ico
+            |__ index.html
+            |__ static
+                |__ css
+                    |__ index.7cb8a531774c9910737734e1c15db140.css
+                    |__ index.7cb8a531774c9910737734e1c15db140.css.map
+                |__ js
+                    |__ index.0f86190d29b252e0535a.js
+                    |__ index.0f86190d29b252e0535a.js.map
+                    |__ manifest.2ae2e69a05c33dfc65f8.js
+                    |__ manifest.2ae2e69a05c33dfc65f8.js.map
+                    |__ vendor.7fed9fa7b7ba482410b7.js
+                    |__ vendor.7fed9fa7b7ba482410b7.js.map
+    |__ node_modules
+    |__ src
+        |__ admin
+            |__ components
+                |__ HelloWorld.vue
+            |__ config
+                |__ index.js
+            |__ pages
+                |__ index
+                  |__ App.vue
+                  |__ favicon.ico
+                  |__ index.html
+                  |__ index.js
+            |__ router
+                |__ index.js
+        |__ global
+            |__ assets
+                |__ logo.png
+        |__ master
+            |__ components
+                |__ HelloWorld.vue
+            |__ config
+                |__ index.js
+            |__ pages
+                |__ index
+                    |__ App.vue
+                    |__ favicon.ico
+                    |__ index.html
+                    |__ index.js
+            |__ router
+                |__ index.js
+    |__ static
+        |__ .gitkeep
+    |__ test
+    |__ .babelrc
+    |__ .editorconfig
+    |__ .gitignore
+    |__ .postcssrc.js
+    |__ package-lock.json
+    |__ package.json
+    |__ README.md
+```

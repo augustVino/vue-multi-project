@@ -134,9 +134,9 @@ npm test
 > #### 2. 每个项目中都有个 pages 文件夹，用来存放项目入口文件。
 > #### 3. 每个项目都有独自的 config 文件，文件内容：
 ``` bash
-	'use strict'
-	module.exports = {
-		name : 'admin',	//文件夹名称 和最后打包后文件夹的名称  /src/admin/
-	}
+    'use strict'
+    module.exports = {
+        name : 'admin', //文件夹名称 和最后打包后文件夹的名称  /src/admin/
+    }
 ```
 
